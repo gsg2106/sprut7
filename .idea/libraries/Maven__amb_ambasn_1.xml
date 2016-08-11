@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: amb:ambasn:1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/amb/ambasn/1/ambasn-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/amb/ambasn/1/ambasn-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/amb/ambasn/1/ambasn-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

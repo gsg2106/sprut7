@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="sprut" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <!--   <non-jta-data-source>sprut</non-jta-data-source>  -->
+    <non-jta-data-source>java:comp/env/jdbc/sprut</non-jta-data-source>
+    <!--  этот тег не обязателен -->
+    <class>metacom.sprut7.domain.Schet</class>
+    <class>metacom.sprut7.domain.TypeCounter</class>
+    <class>metacom.sprut7.domain.GsgWebViewTu</class>
+    <class>metacom.sprut7.domain.GsgWebViewPlat</class>
+    <class>metacom.sprut7.domain.GsgWebViewRa</class>
+    <class>metacom.sprut7.domain.Ra</class>
+    <class>metacom.sprut7.domain.Sputu</class>
+    <class>metacom.sprut7.domain.RaPK</class>
+    <class>metacom.sprut7.domain.RaWeb</class>
+    <class>metacom.sprut7.domain.GsgWebDolgi</class>
+    <class>metacom.sprut7.domain.WebSchets</class>
+    <class>metacom.sprut7.domain.WebInns</class> 
+    <class>metacom.sprut7.domain.WebPlat</class>
+    <class>metacom.sprut7.domain.TipDocs</class>
+    <class>metacom.sprut7.domain.Stua</class>
+    <class>metacom.sprut7.domain.Stur</class>
+    <class>metacom.sprut7.domain.GsgWebOborot</class>
+    <class>metacom.sprut7.domain.GsgWebGoest</class>
+    <class>metacom.sprut7.domain.Pzone</class>
+    <class>metacom.sprut7.domain.GsgWebKs</class>
+    <class>metacom.sprut7.domain.GsgWebViewPu</class>
+    <class>metacom.sprut7.domain.WebStatist</class>
+    <class>metacom.sprut7.domain.GsgWebViewGetkeyStatist</class>
+
+    <class>metacom.sprut7.domain.GsgWebArea</class>
+    <class>metacom.sprut7.domain.SzajPlan</class>
+    <class>metacom.sprut7.domain.SzajNagr</class>
+    <!--<class>metacom.sprut7.domain.Requests</class>-->
+    <properties>
+      <property name="eclipselink.jdbc.platform" value="org.eclipse.persistence.platform.database.FirebirdPlatform"/>
+      <property name="eclipselink.logging.level" value="FINE"/>
+      <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+      <!--      <property name="eclipselink.exclude-eclipselink-orm" value="false"/>    -->
+      <!--      <property name="javax.persistence.jdbc.driver" value="org.firebirdsql.jdbc.FBDriver"/> -->
+      <!--      <property name="javax.persistence.jdbc.url" value="jdbc:firebirdsql:localhost/3050:c:/DB/sprut.fdb"/> -->
+      <!--      <property name="javax.persistence.jdbc.user" value="sysdba"/> -->
+      <!--      <property name="javax.persistence.jdbc.password" value="masterkey"/> -->
+      <!--      <property name="eclipselink.cache.size.default" value="0"/> -->
+      <!--      <property name="eclipselink.cache.type.default" value="NONE"/> -->
+      <property name="eclipselink.cache.size.default" value="0"/>
+      <property name="eclipselink.cache.type.default" value="NONE"/>
+    </properties>
+  </persistence-unit>
+
+
+  <persistence-unit name="sprute" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <!--   <non-jta-data-source>sprut</non-jta-data-source>  -->
+        <non-jta-data-source>java:comp/env/jdbc/sprute</non-jta-data-source>
+        <!--  этот тег не обязателен -->
+        <class>metacom.sprut7.domain.Schet</class>
+        <class>metacom.sprut7.domain.TypeCounter</class>
+        <class>metacom.sprut7.domain.GsgWebViewTu</class>
+        <class>metacom.sprut7.domain.GsgWebViewPlat</class>
+        <class>metacom.sprut7.domain.GsgWebViewRa</class>
+        <class>metacom.sprut7.domain.Ra</class>
+        <class>metacom.sprut7.domain.Sputu</class>
+        <class>metacom.sprut7.domain.RaPK</class>
+        <class>metacom.sprut7.domain.RaWeb</class>
+        <class>metacom.sprut7.domain.GsgWebDolgi</class>
+        <class>metacom.sprut7.domain.WebSchets</class>
+        <class>metacom.sprut7.domain.WebInns</class>
+        <class>metacom.sprut7.domain.WebPlat</class>
+        <class>metacom.sprut7.domain.TipDocs</class>
+        <class>metacom.sprut7.domain.Stua</class>
+        <class>metacom.sprut7.domain.Stur</class>
+        <class>metacom.sprut7.domain.GsgWebOborot</class>
+        <class>metacom.sprut7.domain.GsgWebGoest</class>
+        <class>metacom.sprut7.domain.Pzone</class>
+        <class>metacom.sprut7.domain.GsgWebKs</class>
+        <class>metacom.sprut7.domain.GsgWebViewPu</class>
+        <class>metacom.sprut7.domain.WebStatist</class>
+        <class>metacom.sprut7.domain.GsgWebViewGetkeyStatist</class>
+        <class>metacom.sprut7.domain.GsgWebArea</class>
+        <!--<class>metacom.sprut7.domain.Requests</class>-->
+        <properties>
+            <property name="eclipselink.jdbc.platform" value="org.eclipse.persistence.platform.database.FirebirdPlatform"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+            <!--      <property name="eclipselink.exclude-eclipselink-orm" value="false"/>    -->
+            <!--      <property name="javax.persistence.jdbc.driver" value="org.firebirdsql.jdbc.FBDriver"/> -->
+            <!--      <property name="javax.persistence.jdbc.url" value="jdbc:firebirdsql:localhost/3050:c:/DB/sprut.fdb"/> -->
+            <!--      <property name="javax.persistence.jdbc.user" value="sysdba"/> -->
+            <!--      <property name="javax.persistence.jdbc.password" value="masterkey"/> -->
+            <!--      <property name="eclipselink.cache.size.default" value="0"/> -->
+            <!--      <property name="eclipselink.cache.type.default" value="NONE"/> -->
+            <property name="eclipselink.cache.size.default" value="0"/>
+            <property name="eclipselink.cache.type.default" value="NONE"/>
+        </properties>
+  </persistence-unit>
+
+
+</persistence>

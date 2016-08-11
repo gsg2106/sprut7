@@ -1,0 +1,744 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+        <meta http-equiv="Cache-Control" content="post-check=0, pre-check=0"/>
+        <meta http-equiv="Pragma" content="no-cache"/>
+        <meta http-equiv="expires" content="0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>PDF Signer (расширение)</title>        
+        <link type="text/css" rel="stylesheet" href="plugins/message.css"></link>
+        <script type='text/javascript' src='plugins/deployJava.js'></script>
+        <script type='text/javascript' src='plugins/ua-parser.min.js'></script>
+        <script type='text/javascript' src='plugins/message.js' charset="windows-1251"></script>
+        <script type="text/javascript" src="plugins/javaChecker.js" charset="windows-1251"></script>
+        <script type="text/javascript">
+          //установить язык сообщений для JavaChecker ("ru", "uk", "en")          
+          var language = window.navigator.userLanguage || window.navigator.language;
+          if (language.indexOf("en") !=  - 1)
+              language = "en";
+          else if (language.indexOf("uk") !=  - 1)
+              language = "uk";
+          else 
+              language = "ru";
+
+          var isPageshow = false;
+
+          JavaChecker.init(language);
+          var _ie = JavaChecker.isIE();
+          var browserInfo = JavaChecker.getBrowserInfo();
+          var _windows = JavaChecker.getOS().indexOf("Windows") !=  - 1;
+
+          var _firefox = browserInfo.indexOf("Firefox") !=  - 1;
+          var _opera = browserInfo.indexOf("Opera") !=  - 1;
+          var _chrome = browserInfo.indexOf("Chrome") !=  - 1;
+          var isAddon = _windows && (_firefox || _chrome || _opera);//расширение для Windows и ...
+          var isWinXP = JavaChecker.getOS().indexOf("Windows XP") !=  - 1;
+          if (isWinXP && _firefox) {
+              var vers = JavaChecker.getBrowserVersion();
+              if (vers > 45 && vers < 48) {
+                  isAddon = false;
+              }
+//              if (vers > 45) {
+//                  isAddon = false;
+//              }
+          }
+
+          var startAddonBad = false;//расширение стартовало успешно?
+          var javaIsOK = false;//для браузеров без расширения нужен плагин Java
+          if (!isAddon) {
+              javaIsOK = JavaChecker.verifyJava();//Java поддерживается браузером?    
+          }
+
+          //особенности IE 7, 8 Windows + Safari Mac OS          
+          var isIE7 = false;
+          if (_ie) {
+              isIE7 = true;//все версии IE
+          }
+          if (browserInfo.indexOf("Safari") !=  - 1)
+              isIE7 = true;
+
+          var isUseAddon = false;//при старте выбор (checkbox) - использовать или не использовать расширение
+          
+          function cesaris_pin_callback(box) {
+              dhtmlx.modalbox.hide(box);
+              if (box.id == "cesaris_pin_ok") {
+                  var inputs = cesaris_pin_form.getElementsByTagName("input");
+                  getApplet().setPinPfx(inputs[0].value);
+                  inputs[0].value = "";
+              }
+              else {
+                  getApplet().setPinPfx(null);
+              }
+          }
+
+          var cesaris_pin_form;
+
+          function cesaris_pin_dialog() {
+              if (cesaris_pin_form == null) {
+                  cesaris_pin_form = dhtmlx.modalbox( {
+                      title : "<img src='plugins/resources/lock24.png'>Ввод пароля (ПИН)", content : "cesaris_pin_box", hidden : true
+                  });
+              }
+
+              dhtmlx.modalbox(cesaris_pin_form);
+              document.getElementById("dhtmlx_passw").focus();
+          }
+
+          //передать в апплет выбранный pfx файл и затем из апплета вызвать ввод ПИН
+          function setPfxToApplet(input) {
+              var name = document.getElementById("pfx_filename");
+              if (name != null) {
+                  name = name.value;
+                  if (name.length > 0) {
+                    getApplet().selectPfx(input.value, name);
+                  }
+              }              
+          }
+
+          function setPdfToApplet(input) {
+              var name = document.getElementById("inputFile");
+              if (name != null) {
+                  name = name.value;
+                  if (name.length > 0) {
+                    getApplet().selectPdf(input.value, name);
+                  }   
+              }
+          }
+          
+          function copyPfx_callback(result) {
+              getApplet().copyPfx(result);
+          }
+          
+          function viewSpiner(flag) {
+              var spiner = document.getElementById("Spinner");
+              try {
+                  if (flag) {
+                      spiner.style.display = "block";
+                  }
+                  else {
+                      spiner.style.display = "none";
+                  }
+              }
+              catch (ex) {
+                  ;
+              }
+          }
+
+          function getApplet() {
+              var app;
+              if (_ie)
+                  app = document.applets["signerApplet"];
+              else 
+                  app = document.embeds[0];
+              return app;
+          }
+
+          function getUserAgent() {
+              //передача аплету инфо. о браузере
+              return navigator.userAgent;
+          }
+
+          function getCertCount() {
+              //получить число сертификатов 
+              if (!isAddon || !isUseAddon) {
+                  document.getElementById("certCount").value = getApplet().getCertCount()
+              }
+              else {
+                  //передать в команду в дополнение
+                  if (!startAddonBad) {
+                      window.postMessage( {
+                          direction : "cesaris_request.getCertCount", message : ""
+                      },
+"*");
+                  }
+              }
+          }
+
+          //получить список сертификатов для select
+          //в список включаются только сертификаты, предназначенные для подписи (KeyUsage: signature)
+          //не включаются: не валидные по сроку действия и "только шифрование"
+          //поддерживаемые хранилища: все Microsoft, включая смарт-карты
+          //ПИН доступа к хранилищу (если нужен) запрашивается при операции "Подписать"          
+          function getCertList() {
+              buttonBlock(true);
+              if (!isAddon || !isUseAddon) {
+                  try {
+
+                      var applet = getApplet();
+                      var select = document.getElementById("cesaris_certlist");
+
+                      var jsArray = [];
+                      var jsArrayDate = [];
+
+                      //инициализация
+                      applet.getCertCN();
+                      //Имя владельца сертификата
+                      var s_ = applet.getCNAsString();
+                      jsArray = s_.split("|");
+                      //дата окончания действия сертификата
+                      s_ = applet.getDateToAsString();
+                      jsArrayDate = s_.split("|");
+
+                      select.options.length = 0;
+                      for (var k = 0;k < jsArray.length;k++) {
+                          s_ = jsArray[k] + " [" + jsArrayDate[k] + "]";
+                          select.options[select.options.length] = new Option(s_, k);
+                      }
+                      //число валидных сертификатов
+                      try {
+                          document.getElementById("certCount").value = applet.getCertCount();
+                      }
+                      catch (exc) {
+                          ;
+                      }
+                  }
+                  catch (ex) {
+                      ;
+                  }
+                  document.getElementById("clearID").style.display = "";
+                  buttonBlock(false);
+              }
+              else {
+                  //передать в команду в дополнение
+                  if (isPageshow) {
+                      window.postMessage( {
+                          direction : "cesaris_request.getCertList", message : ""
+                      },
+"*");
+                  }
+              }
+          }
+
+          //загрузить список сертификатов при старте страницы
+          function onLoadPage() {
+              try {
+                  getCertList();
+              }
+              catch (ex) {
+                  ;
+              }
+          }
+
+          function isAddonInstalled() {
+              //загружено дополнение?
+              setTimeout(function () {
+                  if (!document.body.classList.contains("cryptoext-installed")) {
+                      var userInput = confirm("Вам необходимо загрузить и установить\nдополнение/расширение для браузера.\n\n" + "При установке надо выбрать команду 'Разрешить'.\nПосле установки необходимо обновить страницу.\n\nВы согласны?");
+                      if (userInput) {
+                          if (_firefox)
+                              window.open("https://cesaris.itsway.kiev.ua/ca/addon/cryptoext.xpi", "_top");
+                          else if (_opera) {
+                              window.open("https://cesaris.itsway.kiev.ua/ca/addon/opera/update/cryptoext.nex", "_top");
+                          }
+                          else if (_chrome) {
+                              window.open("https://chrome.google.com/webstore/detail/cryptoext-cesaris/mhhnobjhifpifchdclbkkenhlhiaioae", "_top");
+                          }
+                      }
+                      else {
+                          if (_firefox) {
+                              //работаем через апплет
+                              document.getElementById("useAddonCheckBox").checked = false;
+                              setUseAddon();
+                          }
+                          else {
+                              viewSpiner(false);
+                          }
+                      }
+                  }
+              },
+5000);
+          }
+
+          function isAddonStarted() {
+              //стартовало дополнение?              
+              setTimeout(function () {
+                  if (document.body) {
+                      var select = document.getElementById("cesaris_certlist");
+                      if (select && select.options.length == 0) {
+                          document.getElementById("buttonRenew").click();
+                          isAddonInstalled();
+                      }
+                  }
+              },
+2000);
+          }
+
+          function startApplet() {
+              buttonBlock(true);
+              document.getElementById("inputFile").value = "";
+              document.getElementById("signFileName").value = "";
+                            
+              if (isAddon) {
+                  //дополнение включить?
+                  document.getElementById("divuseAddon").style.display = "block";
+              }
+
+              isUseAddon = document.getElementById("useAddonCheckBox").checked;
+              if (!isAddon || !isUseAddon) {
+                  javaIsOK = JavaChecker.verifyJava();//Java поддерживается браузером/ОС?
+              }
+              
+              if (_opera || _chrome) {//можно только с расширением
+                  document.getElementById("useAddonCheckBox").checked = true;
+                  isUseAddon = true;
+              }
+              
+              if (!isAddon || !isUseAddon) {
+                  var div;
+                  if (!javaIsOK) {
+                      var userInput = confirm("Программное обеспечение Java JRE (32-бит)\nне установлено или не разрешено в браузере.\n\nОбратите внимание на нижнюю/верхнюю строку\nбраузера, где может быть запрос \"Разрешить...?\".\n\nЗагрузить Java JRE?");
+                      if (userInput) {
+                          if (_windows) {
+                              window.open("http://java.com/ru/download/windows_xpi.jsp", "_top");
+                          }
+                          else {
+                              window.open("http://java.com/ru/download/", "_top");
+                          }
+                      }
+                      else {
+                          //java.com тест, что установлена Java
+                          //window.open("http://java.com/ru/download/testjava.jsp", "_blank");
+                      }
+                  }
+                  else {
+                      var appletHtml;
+                      if (_ie) {
+                          //IE
+                          appletHtml = '<object id="signerApplet" name="Bazis Signer Client" classid="clsid:CAFEEFAC-0016-0000-FFFF-ABCDEFFEDCBA" width="1" height="1" declare="declare"> <param name="type" value="application/x-java-applet"/> <param name="code" value="com.amb.applet.view.SignerWin"/> <param name="codebase_lookup" value="false"/> <param name="codebase" value="./plugins/"/> <param name="cache_option" value="Plugin"/> <param name="cache_archive_ex" value="ambasn.jar;preload,ambprovider.jar;preload,ambapi.jar;preload,pdfapi.jar;preload"/> <param name="cache_archive" value="ambclient.jar"/>';
+                          appletHtml = appletHtml + ' <param name="separate_jvm" value="true"/> <param name="language" value="ru"/> <param name="java_arguments" value=" -Djnlp.packEnabled=true -Xms512m -Xmx1024m -Dsun.java2d.d3d=false -Dsun.java2d.noddraw=true"/> <\/object>';
+                      }
+                      else {
+                          //Chrome, Opera, Forefox.        
+                          appletHtml = '<embed id="signerApplet" name="Bazis Signer Client" width="1" height="1" type="application/x-java-applet" pluginspage="http://www.java.com/en/download/" code="com.amb.applet.view.SignerWin" codebase_lookup="false" codebase="./plugins/" cache_option="Plugin" cache_archive_ex="ambasn.jar;preload,ambprovider.jar;preload,ambapi.jar;preload,pdfapi.jar;preload" cache_archive="ambclient.jar" language="ru" separate_jvm="true" java_arguments=" -Djnlp.packEnabled=true -Xms512m -Xmx1024m -Dsun.java2d.d3d=false -Dsun.java2d.noddraw=true"/>';
+                      }
+                      div = document.getElementById("cesaris_signer_div");
+                      if (div)
+                          div.innerHTML = appletHtml;
+                  }
+                  //PIN box  
+                  appletHtml = "<div id='cesaris_pin_box' style='display:none'>" + "<div>Ввести пароль (ПИН) к ключу<br/><br/></div>" + "<div><label><span style='color:Red;'>*</span></label>Пароль <input id='dhtmlx_passw' type='password' autocomplete='off'/></div>" + "<div><p align='center'><input type='button' id='cesaris_pin_ok' value='Да' onclick='cesaris_pin_callback(this)' style='width:80px;'/>" + "<input type='button' id='cesaris_pin_no' value='Нет' onclick='cesaris_pin_callback(this)' style='width:80px;'/></p></div></div>";
+                  div = document.getElementById("cesaris_pin_div");
+                  if (div)
+                      div.innerHTML = appletHtml;
+
+                  if (!javaIsOK) {
+                      viewSpiner(false);
+                  }
+              }
+
+              if (isAddon && isUseAddon) {
+                  addListener();
+                  onLoadPage();
+                  isAddonStarted();
+              }
+          }
+
+          function setUseAddon() {
+              document.getElementById("inputFile").value = "";
+              document.getElementById("signFileName").value = "";
+              isUseAddon = document.getElementById("useAddonCheckBox").checked;
+              startApplet();
+          }
+
+          //просмотр выбранного сертификатa 
+          function viewCert() {
+              var index = document.getElementById("cesaris_certlist").selectedIndex;
+              if (!isAddon || !isUseAddon) {
+                  getApplet().viewCert(index);
+              }
+              else {
+                  //передать в команду в дополнение
+                  if (!startAddonBad) {
+                      window.postMessage( {
+                          direction : "cesaris_request.viewCert", message : index.toString()
+                      },
+"*");
+                  }
+              }
+          }
+          
+          //выбрать pfx файл как хранилище ключей и их цепочки сертификатов
+          function selectPfxPath() {              
+              if (!isAddon || !isUseAddon) {
+                  if (isIE7) {
+                      var ret = getApplet().selectPfxPath();
+                      if (ret == 0) {
+                          //перезагрузить список сертификатов                  
+                          getCertList();
+                      }                      
+                  }
+                  else {
+                      document.getElementById("selectPfxFileButtonID").click();
+                  }                   
+              }
+              else {
+                  //передать в команду в дополнение
+                  if (!startAddonBad) {
+                      window.postMessage( {
+                          direction : "cesaris_request.selectPfxPath", message : ""
+                      },
+"*");
+                  }
+              }
+          }
+
+          function clearPfxProperties() {
+              //очистить в конфиг.файле запись о PFX файле
+              if (!isAddon || !isUseAddon) {
+                  var ret = getApplet().clearPfxProperties();
+                  if (ret == 0) {
+                      //перезагрузить список сертификатов                  
+                      getCertList();
+                  }
+              }
+              else {
+                  //передать в команду в дополнение
+                  if (!startAddonBad) {
+                      window.postMessage( {
+                          direction : "cesaris_request.clearPfxProperties", message : ""
+                      },
+"*");
+                  }
+              }
+          }
+
+          function getChoisedFile() {
+              //выбрать pdf-файл для подписания              
+              if (!isAddon || !isUseAddon) {
+                  if (isIE7) {
+                      document.getElementById("inputFile").value = getApplet().fileChoiser();
+                  }
+                  else {
+                      document.getElementById("selectPdfFileButtonID").click();
+                  }                  
+              }
+              else {
+                  //передать в команду в дополнение
+                  if (!startAddonBad) {
+                      window.postMessage( {
+                          direction : "cesaris_request.selectPdfFile", message : ""
+                      },
+"*");
+                  }
+              }
+          }
+
+          function viewPdf(file) {
+              if (!isAddon || !isUseAddon) {
+                  getApplet().viewPdf(file);
+              }
+              else {
+                  //передать в команду в дополнение  
+                  if (!startAddonBad) {
+                      window.postMessage( {
+                          direction : "cesaris_request.viewPdf", message : file
+                      },
+"*");
+                  }
+              }
+          }
+
+          function viewSourcePdf() {
+              //показать исходный PDF
+              viewPdf(document.getElementById("inputFile").value);
+          }
+
+          function viewSignedPdf() {
+              //показать подписанный PDF
+              viewPdf(document.getElementById("signFileName").value);
+          }
+
+          function signFile() {
+              buttonBlock(true);
+              //подписать pdf
+              document.getElementById("signFileName").value = "";
+              var indx = document.getElementById("cesaris_certlist").selectedIndex;
+
+              var tsp = document.getElementById("TimeStampCheckBox").checked;
+              var crl = document.getElementById("CRLCheckBox").checked;
+
+              var tsaUrl = document.getElementById("hiddenTsaUrl").value;
+              if (tsp == false)
+                  tsaUrl = "";
+
+              if (!isAddon || !isUseAddon) {
+                  var applet = getApplet();
+                  //подавить сообщения об ОК, показывать только об ошибках
+                  //applet.setSilentMode(true);
+                  var data = applet.getSign(indx, tsaUrl, crl);
+                  //имя подписанного файла можно вывести 
+                  //если ошибка при подписывании, то возвращает пустое имя ""
+                  document.getElementById("signFileName").value = data;
+                  buttonBlock(false);
+              }
+              else {
+                  if (!startAddonBad) {                      
+                      //true - подавить сообщения об ОК, показывать только об ошибках
+                      var setSilentMode_ = false;
+                      //передать в команду в дополнение                 
+                      window.postMessage( {
+                          direction : "cesaris_request.signFilePdf", message :  {
+                              setSilentMode : setSilentMode_, inindex : indx, intsaUrl : tsaUrl, incrl : crl
+                          }
+                      },
+"*");
+                  }
+              }
+          }
+
+          //проверить подписи входящего PDF-файла , имя которого в signFileName
+          //возвращает 0 (true) или 1 (false); сообщения и краткие детали выводит сам аплет
+          function sourceVerify() {
+              var file = document.getElementById("inputFile").value;
+              if (!isAddon || !isUseAddon) {
+                  result = getApplet().verify(file);// result (int): 0 - OK; 1 - false           
+              }
+              else {
+                  //передать в команду в дополнение   
+                  if (!startAddonBad) {
+                      window.postMessage( {
+                          direction : "cesaris_request.signFilePdfVerify", message : file
+                      },
+"*");
+                  }
+              }
+          }
+
+          //проверить подписи исходящего PDF-файла , имя которого в signFileName
+          //возвращает 0 (true) или 1 (false); сообщения и краткие детали выводит сам аплет
+          function signatureVerify() {
+              var file = document.getElementById("signFileName").value;
+              if (!isAddon || !isUseAddon) {
+                  result = getApplet().verify(file);// result (int): 0 - OK; 1 - false           
+              }
+              else {
+                  //передать в команду в дополнение   
+                  if (!startAddonBad) {
+                      window.postMessage( {
+                          direction : "cesaris_request.signFilePdfVerify", message : file
+                      },
+"*");
+                  }
+              }
+          }
+
+          function addListener() {
+              //странице получить сообщение от контент-скрипта расширения
+              window.addEventListener("message", function (event) {
+                  var data;
+                  if (event.data) {
+                      try {
+                          data = JSON.parse(event.data);
+                      }
+                      catch (ex) {
+                          ;
+                      }
+                  }
+
+                  if (data && data.direction && data.direction.indexOf("cesaris_receiv") !=  - 1) {
+                      var cmd = data.direction;
+                      cmd = cmd.substring(15, cmd.length);
+                      try {
+                          switch (cmd) {
+                              case "getCertList":
+                                  if (data.message && data.message.length > 0) {
+                                      var jsArray = data.message.split("|");
+                                      var select = document.getElementById("cesaris_certlist");
+                                      select.options.length = 0;
+                                      for (var k = 0;k < jsArray.length;k++) {
+                                          select.options[select.options.length] = new Option(jsArray[k], k);
+                                      }
+                                      getCertCount();                                      
+                                  } else {
+                                      select.options[0] = new Option("<X.509 сертификат отсутствует>", 0);
+                                  }                  
+                                  document.getElementById("clearID").style.display = "";                                  
+                                  break;
+                              case "getCertCount":
+                                  document.getElementById("certCount").value = data.message;
+                                  break;
+                              case "selectPdfFile":
+                                  document.getElementById("inputFile").value = data.message;
+                                  break;
+                              case "signFilePdf":
+                                  document.getElementById("signFileName").value = data.message;
+                                  break;
+                              case "noJVM":
+                                  startAddonBad = true;//расширение стартовало неуспешно
+                                  var message = data.message;
+                                  if (message.indexOf("JVM not found") !=  - 1) {
+                                      var userInput = confirm("Программное обеспечение Java JRE (32-бит) не установлено.\n\nЗагрузить Java JRE?");
+                                      if (userInput) {
+                                          if (_windows) {
+                                              window.open("http://java.com/ru/download/windows_xpi.jsp", "_top");
+                                          }
+                                          else {
+                                              window.open("http://java.com/ru/download/", "_top");
+                                          }
+                                      }
+                                  }
+                                  else {
+                                      alert("Ошибка старта расширения:\n\n" + message);
+                                      viewSpiner(false);
+                                  }
+                                  break;
+                              default :
+                                  break;
+                          }
+                          buttonBlock(false);
+                      }
+                      catch (ex) {
+                          ;
+                      }
+                  }
+              });
+
+              window.onbeforeunload = function () {
+                  window.postMessage( {
+                      direction : "cesaris_request.unload_page", message : ""
+                  },
+"*");
+              }
+          }
+
+          window.addEventListener("pageshow", function (event) {
+              isPageshow = true;
+          },
+false);
+
+          function buttonBlock(flag) {
+              viewSpiner(flag);
+              document.getElementById("bchoisePdf").disabled = flag;
+              document.getElementById("bsignPdf").disabled = flag;              
+              document.getElementById("bviewCert").disabled = flag; 
+              
+              document.getElementById("bselectPfxPath").disabled = flag;                            
+              document.getElementById("bviewPdf").disabled = flag;
+              document.getElementById("bsourceVerify").disabled = flag;
+              document.getElementById("bviewSignedPdf").disabled = flag;
+              document.getElementById("bsignVerify").disabled = flag;
+          }
+        </script>
+    </head>
+    <body onload="startApplet();" style="background-color:#FFFFF9;">
+        <form id="myForm" action="">
+            <div id="infodiv"></div>
+            <table cellspacing="2" cellpadding="3" border="0">
+                <tr style="height: 40px;">
+                    <td nowrap="nowrap">
+                        Личные сертификаты:
+                        <input type="text" id="certCount" readonly="readonly" maxlength="3" size="3"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td id="Spinner" align="center">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<img src="plugins/spinner.gif" alt=""/>
+                    </td>
+                    <td nowrap="nowrap" style="display:none" id="clearID">                        
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        <a href="#" onclick="clearPfxProperties();">Очистить конфигурацию pfx</a>                        
+                    </td>
+                </tr>
+            </table>
+            <table cellspacing="2" cellpadding="3" border="0">
+                <tr>
+                    <td align="left">
+                        <select id="cesaris_certlist" class="required"></select>
+                    </td>
+                    <td>
+                        <input type="button" id="bviewCert" onclick="viewCert()" value="Показать..."/>
+                    </td>
+                    <td>
+                        <input type="button" id="buttonRenew" onclick="getCertList()" value="Обновить"/>
+                    </td>                    
+                    <td>
+                        <!-- выбрать pfx файл как хранилище ключей и их цепочки сертификатов;
+                            pfx файл может находится на любом носителе, к нему надо указать (по запросу апплета) путь;
+                            путь будет храниться в файле свойств "user.home\Application Data\AMB\SignerApplet\Signer.properties" -->
+                        <input type="button" id="bselectPfxPath" onclick="selectPfxPath()" value="Выбрать pfx файл..."/>
+                         
+                        <input type="button" id="selectPfxFileButtonID" style="display:none"
+                               onclick="cesaris_performClick('cesaris_handleFileID', '.pfx');"/>
+                         
+                        <input type="file" id="cesaris_handleFileID" style="display:none"
+                               onchange="cesaris_handleFiles(this, 'pfx_filename', 'cesaris_pfxDataTagID');"/>
+                         
+                        <input type="text" id="pfx_filename" style="display:none" value=""/>
+                    </td>
+                </tr>
+            </table>
+            <p style="font-weight: bold;">
+                Локальный файл PDF: 
+                <input type="text" id="inputFile" accept="true" value=""/>
+                 
+                <input type="button" id="bchoisePdf" onclick="getChoisedFile();" value="Выбрать..."/>
+                 
+                <input type="button" id="selectPdfFileButtonID" style="display:none"
+                       onclick="cesaris_performClick('cesaris_pdfHandleFileID', '.pdf');" value="Выбрать..."/>
+                 
+                <input type="file" id="cesaris_pdfHandleFileID" style="display:none"
+                       onchange="cesaris_handleFiles(this, 'inputFile', 'cesaris_pdfDataTagID');"/>
+                 
+                <input type="button" id="bviewPdf" onclick="viewSourcePdf();" value="Показать..."/>
+                 
+                <input type="button" id="bsourceVerify" onclick="sourceVerify();" value="Проверить..."/>
+            </p>
+            <table cellspacing="2" cellpadding="3" border="0">
+                <tr>
+                    <td nowrap="nowrap" >
+                        <input checked="checked" type="checkbox" id="TimeStampCheckBox"/>
+                         Добавить к подписи метку времени&nbsp;
+                    </td>
+                    <td>
+                        &nbsp;&nbsp;                        
+                    </td>                    
+                </tr><tr>
+                    <td nowrap="nowrap" >
+                        <input checked="checked" type="checkbox" id="CRLCheckBox"/>
+                            Добавить к подписи списки отзыва (CRL)&nbsp;    
+                    </td>
+                    <td>
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;   
+                        <input type="button" id="bsignPdf" onclick="signFile()" value="Подписать"/>
+                    </td>
+                </tr> 
+                <tr id="divuseAddon" style='display:none'>                    
+                    <td nowrap="nowrap">                          
+                            <input type="checkbox" id="useAddonCheckBox" checked="checked" onchange="setUseAddon();"/>Использовать
+                                                                                                                      расширение
+                                                                                                                      браузера&nbsp;
+                    </td>
+                    <td>
+                        &nbsp;(см. <a href="https://cesaris.itsway.kiev.ua/ca/addon/cryptoext_help_ru.html" target="_blank">Инструкция</a>)                        
+                    </td>                    
+                </tr>
+            </table>
+            <p style="font-weight: bold;">
+                Файл подписанного PDF: 
+                <input type="text" id="signFileName" value=""/>
+                 
+                <input type="button" id="bviewSignedPdf" onclick="viewSignedPdf()" value="Показать..."/>
+                 
+                <input type="button" id="bsignVerify" onclick="signatureVerify()" value="Проверить..."/>
+            </p>
+            <hr/>
+            <p>
+                По вопросам ЭЦП: <a href="http://itsway.kiev.ua/about_ru.html" target="_blank">Техническая поддержка</a>.
+                См. также <a href="http://itsway.kiev.ua/index.php?language=ru&main_managemen=prodaction&managemen=faq_info" target="_blank">Часто задаваемые вопросы</a>.
+            </p>
+            <p>
+                <input type="hidden" id="hiddenTsaUrl" value="http://cesaris.itsway.kiev.ua/tsa/srv/"/>
+            </p>
+            <div>
+                <textarea id="cesaris_pfxDataTagID" style="display:none" cols="100" rows="10"
+                          onchange="setPfxToApplet(this);"></textarea>
+            </div>
+            <div>
+                <textarea id="cesaris_pdfDataTagID" style="display:none" cols="100" rows="100" wrap="hard"
+                          onchange="setPdfToApplet(this);"></textarea>
+            </div>
+            <div id="cesaris_signer_div"></div>
+            <div id="cesaris_pin_div"></div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: amb:ambapi:1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/amb/ambapi/1/ambapi-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/amb/ambapi/1/ambapi-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/amb/ambapi/1/ambapi-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

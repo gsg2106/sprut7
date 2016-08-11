@@ -1,0 +1,15 @@
+{
+    "pathToNoSignLS": "c:\\LS\\NOSIGN", 
+    "pathToSignLS": "c:\\LS\\SIGN", 
+    "pathToReadyLS": "c:\\LS\\READY",
+    "pathKeystore": "C:\\keystore\\petrov_rsa.pfx",
+    "keystorePassword": "1",
+    "tested": "1",
+    "lispReses" : {
+        "Горловка"   : "sprut",
+        "Енакиево"   : "sprut",
+        "Донецк"     : "sprut",
+        "Тельманово" : "sprut",
+        "Веселое"    : "sprut"
+    }
+}

@@ -1,0 +1,142 @@
+/* Import the reindeer theme. */
+/* This only allows us to use the mixins defined in it and does not add any styles by itself. */
+@import "../reindeer/reindeer.scss";
+
+/* This contains all of your theme. */
+/* If somebody wants to extend the theme she will include this mixin. */
+@mixin mytheme {
+/* Include all the styles from the reindeer theme */
+  @include reindeer;
+
+/* Insert your theme rules here */
+
+  .v-menubar-menubararea{
+    /* цвет шифта         color:blue; */
+    /*background-color: blue;*/
+    /*background-attachment:scroll;*/
+    text-align: center;
+    background: transparent;
+    border: none;
+    color: white;
+    text-shadow: none;
+    font-size: 16px;
+  }
+
+  .v-label-labelcapt{
+    font-weight: bold;
+    color:black;
+    alignment-adjust:central;
+    width:100%;
+  }
+
+  .v-captiontext {
+    color: slategray; /* red;*/
+    font-size:  large;
+  }
+
+  .v-embedded-image{
+    margin-left: -50;
+  }
+
+  .v-panel-loginpanel{
+    padding:5px;
+    margin: 5px;
+    border: 1px solid black;
+
+  }
+
+  .v-panel-caption
+    {
+    font-size:  large;
+    /*        background: #335C77;  */
+    /*        font-weight: bold;   */
+    /*        font-style: normal;  */
+    /*        height: 25px;  */
+    /*        padding-left: 8px;  */
+    /*        padding-top: 4px;  */
+    /*        padding-bottom: 3px;  */
+  }
+
+  .v-textfield-edit
+    {
+    margin-top: -1px;
+  }
+  .v-verticallayout-login
+    {
+    padding-top: 100px;
+  }
+  .v-caption-editstyle {
+    font-weight: bold;
+    /*  color: red;*/
+  }
+
+  #body {
+    height:100%;
+  }
+  #header {
+    height: 75px;
+    border: 1px solid black;
+    padding-top:5px;
+    padding-left:10px;
+
+    /* если градиент не поддерживается - сплошная заливка */
+    background: #87CEFA;  /* Для старых браузров */
+    /* chrome 2+, safari 4+;*/
+    background-image:-webkit-gradient(linear,left bottom,left top,
+      color-stop(0%,#F5FFFA), color-stop(100%,#87CEFA));
+    /* chrome 10+, safari 5.1+ */
+    background-image:-webkit-linear-gradient(#F5FFFA,#87CEFA);
+    /* firefox;*/
+    background-image:-moz-linear-gradient(top,#F5FFFA,#87CEFA);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F5FFFA', endColorstr='#87CEFA');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#F5FFFA', endColorstr='#87CEFA')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#F5FFFA,#87CEFA);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#F5FFFA,#87CEFA);
+    /* "стандарт" */
+    background-image: linear-gradient(#F5FFFA,#87CEFA);
+  }
+
+  #subheader {
+    height:18px;
+    background-color:Deepskyblue; /* lightskyblue;*/
+    text-align:center;
+  }
+
+  #menuheader {
+    height:23px;
+    text-align:left;
+    /* если градиент не поддерживается - сплошная заливка */
+    background:Deepskyblue; /*cornflowerblue;*/  /* #87CEFA; Для старых браузров */
+    /*
+      background-image:-webkit-gradient(linear,left bottom,left top,
+                    color-stop(0%,Deepskyblue), color-stop(100%,#87CEFA));
+      background-image:-webkit-linear-gradient(Deepskyblue,#87CEFA);
+      background-image:-moz-linear-gradient(top,Deepskyblue,#87CEFA);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='Deepskyblue', endColorstr='#87CEFA');
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='Deepskyblue', endColorstr='#87CEFA')";
+      background-image: -ms-linear-gradient(Deepskyblue,#87CEFA);
+      background-image: -o-linear-gradient(Deepskyblue,#87CEFA);
+      background-image: linear-gradient(Deepskyblue,#87CEFA);
+    */
+  }
+
+  #mainpanel {
+    /*	height: 100px; */
+    width:100%;
+
+    margin:0 auto;
+    /*        margin-top: 100px; */
+    padding:5px;
+    /*        border: 1px solid black; */
+
+  }
+  #footer {
+    height:100;
+    /*      border: 1px solid black; */
+    /*	background-color:#606060; */
+  }
+}

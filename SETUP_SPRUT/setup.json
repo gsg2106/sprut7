@@ -1,0 +1,27 @@
+﻿{
+    "pathToNoSignLS": "c:\\LS\\NOSIGN", 
+    "pathToSignLS":   "c:\\LS\\SIGN", 
+    "pathToReadyLS":  "c:\\LS\\READY",
+    "pathToTmp":      "c:\\LS\\TMP", 
+    "pathKeystore":   "c:\\keystore",
+    "tested": "1",
+    "goestEnabled": "1",
+    "lispReses" : {
+        "Горловка"   : "sprut",
+        "Енакиево"   : "sprute",
+        "Донецк"     : "sprut",
+        "Тельманово" : "sprut",
+        "Веселое"    : "sprut"
+    },
+    "lispKeystores" : {
+	"2385211316,00131268" : "Підгорецький Володимир Іванович_023A0F.pfx",
+        "2714921704,null" : "Zvyagina_DonOE.pfx",
+	"2704116206,null" : "Shashatskaya_DonOE.pfx"
+    },
+    "lispKeystorePasswords" : {
+	"Підгорецький Володимир Іванович_023A0F.pfx" : "1",
+        "Zvyagina_DonOE.pfx" : "1",
+	"Shashatskaya_DonOE.pfx" : "1"
+    }
+
+}

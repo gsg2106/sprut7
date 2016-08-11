@@ -1,0 +1,22 @@
+﻿{
+    "pathToNoSignLS": "c:\\LS\\NOSIGN", 
+    "pathToSignLS": "c:\\LS\\SIGN", 
+    "pathToReadyLS": "c:\\LS\\READY",
+    "pathKeystore": "C:\\keystore",
+    "tested": "1",
+    "lispReses" : {
+        "Горловка"   : "sprut",
+        "Енакиево"   : "sprut",
+        "Донецк"     : "sprut",
+        "Тельманово" : "sprut",
+        "Веселое"    : "sprut"
+    },
+    "lispKeystores" : {
+	"2385211316" : "fggghh",
+	"ffffff" : "ffghghh"
+    },
+    "lispKeystorePasswords" : {
+	"gggghjhhh" : "1",
+        "ffghuuuiio" : "2"
+    }
+}
