@@ -18,12 +18,17 @@ import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import metacom.sprut7.Statistika;
+import metacom.sprut7.dao.Orik;
 import metacom.sprut7.domain.GsgWebDolgi;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
  * @author Сергей
  */
+@Scope("prototype")
 public class Dolgi extends VerticalLayout implements IComponentContainer{
     private Integer idplat;
     private String linkRes;
@@ -34,6 +39,9 @@ public class Dolgi extends VerticalLayout implements IComponentContainer{
     private Panel infoPan = null;
     private Component contentInfoPan;
 
+    //@Autowired
+    private Orik dao;
+
     public Dolgi() {
     }
 
@@ -42,7 +50,8 @@ public class Dolgi extends VerticalLayout implements IComponentContainer{
         //linkRes =(String) VaadinSession.getCurrent().getAttribute("linkRes");
         StatePlat statePlat = (StatePlat) VaadinSession.getCurrent().getAttribute("statePlat");
         linkRes = statePlat.getLinkRes();
-
+        ApplicationContext applicationContext = (ApplicationContext) VaadinSession.getCurrent().getAttribute("applicationContext");
+        dao = (Orik) applicationContext.getBean("daoOrik");
 
 //        config = (Config) VaadinSession.getCurrent().getAttribute("config");
 //        statePlat = (StatePlat)  VaadinSession.getCurrent().getAttribute("statePlat");
@@ -109,6 +118,33 @@ public class Dolgi extends VerticalLayout implements IComponentContainer{
             infoLayout.addComponent(new Label(ms, ContentMode.HTML));
             infoLayout.addComponent(hl);
         }
+        boolean isNeedZayvka = dao.isNewPutZayavka(linkRes, idplat);
+        if (isNeedZayvka){
+            String ms ="<i><p style=\"color:#0000ff\">"+
+                    "«Уважаемый клиент, напоминаем Вам, что до 1 ноября текущего года Вам необходимо заполнить заявку на ожидаемый объем потребления электроэнергии в следующем году. \n" +
+                    "После 1 ноября функция  внесения заявки будет недоступна!» "+
+                    "Нажмите кнопку \"Посмотреть Зафвки\", чтобы перейти на страницу формирования заявок."+
+                    "</p> </i>";
+            HorizontalLayout hl = new HorizontalLayout();
+            hl.setWidth("100%");
+            Button fireDoc = new Button("Посмотреть заявки");
+            fireDoc.addClickListener(new Button.ClickListener(){
+                @Override
+                public void buttonClick(Button.ClickEvent clickEvent) {
+                    getUI().getNavigator().navigateTo("application");
+                }
+            });
+            hl.addComponent(fireDoc);
+            hl.setComponentAlignment(fireDoc, Alignment.MIDDLE_CENTER);
+
+            if (infoLayout == null){
+                infoLayout = new VerticalLayout();
+                infoLayout.setMargin(true);
+            }
+            infoLayout.addComponent(new Label(ms, ContentMode.HTML));
+            infoLayout.addComponent(hl);
+        }
+
 
         return infoLayout;  //To change body of created methods use File | Settings | File Templates.
     }

@@ -134,7 +134,7 @@ public class OrikKvitImpl extends TableEditParent{
     }
 
     @Override
-    protected void sinchrinize(Integer idPotr, Integer year) {
-        dao.sinchrinizeLispPotr(linkRes, idPotr, year);
+    protected String sinchrinize(Integer idPlat, Integer year) {
+        return dao.sinchrinizeLispPotr(linkRes, idPlat, year);
     }
 }

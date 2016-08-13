@@ -6,6 +6,7 @@ import com.vaadin.server.Resource;
 import com.vaadin.shared.ui.datefield.Resolution;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.Reindeer;
+import metacom.sprut7.dao.Orik;
 import metacom.sprut7.domain.GsgWebArea;
 import com.vaadin.data.Container;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,7 @@ public class OrikRightImpl extends VerticalLayout implements IUpdatebleArea{
     private InlineDateField datetime;
     private java.util.Calendar calendar = GregorianCalendar.getInstance();
     private int year;
+    private String linkRes;
     private GsgWebArea item;
     //private int month;
 
@@ -46,9 +48,13 @@ public class OrikRightImpl extends VerticalLayout implements IUpdatebleArea{
     @Autowired
     TabSheetMainLayout tabSheetMainLayoutPower;
 
+    @Autowired
+    Orik dao;
+
     @Override
-    public void init(String linkRes, GsgWebArea item) {
-        this.item = item;
+    public void init(String linkResL, GsgWebArea itemL) {
+        this.item = itemL;
+        this.linkRes = linkResL;
         setStyleName("Layoutra");
         VerticalLayout topLayout = new VerticalLayout();
         topLayout.setWidth("100%");
@@ -69,9 +75,24 @@ public class OrikRightImpl extends VerticalLayout implements IUpdatebleArea{
         tabSheet.setHeight("100%"); //t.setHeight("200px");
         tabSheet.setWidth("100%");  //t.setWidth("400px");
         orikKvit.init(linkRes, item, year);
+        orikKvit.setReadOnly(dao.isZayavkaReadOnly(linkRes,item.getIdPlat(),year));
         orikKvitPower.init(linkRes, item, year);
-        tabSheetMainLayout.init(orikKvit);
-        tabSheetMainLayoutPower.init(orikKvitPower);
+        orikKvitPower.setReadOnly(dao.isZayavkaReadOnly(linkRes,item.getIdPlat(),year));
+
+        tabSheetMainLayout.init(orikKvit, new TabSheetMainLayout.Recipient() {
+            @Override
+            public boolean isReadOnly() {
+                return dao.isZayavkaReadOnly(linkRes,item.getIdPlat(),year);
+            }
+        });
+        tabSheetMainLayout.setReadOnly(dao.isZayavkaReadOnly(linkRes,item.getIdPlat(),year));
+        tabSheetMainLayoutPower.init(orikKvitPower,new TabSheetMainLayout.Recipient(){
+            @Override
+            public boolean isReadOnly() {
+                return dao.isZayavkaReadOnly(linkRes,item.getIdPlat(),year);
+            }
+        });
+        tabSheetMainLayoutPower.setReadOnly(dao.isZayavkaReadOnly(linkRes,item.getIdPlat(),year));
         tabSheet.addTab(tabSheetMainLayout,"Заявки на лимиты потребления.", icon1).setStyleName("vl1");
 //        tabSheet.addTab(orikKvit, "Заявки на лимиты потребления.", icon1).setStyleName("vl1");
         tabSheet.addTab(tabSheetMainLayoutPower, "Заявки на лимиты мощности.", icon1).setStyleName("vl1");
@@ -83,8 +104,10 @@ public class OrikRightImpl extends VerticalLayout implements IUpdatebleArea{
         }
         tabSheet.setStyleName(Reindeer.TABSHEET_MINIMAL);
         /*--------------------------------------------------- */
+
         addComponent(topLayout);
         addComponent(tabSheet);
+        updateState();
     }
 
     /** сформируем выбор года - месяца */
@@ -126,6 +149,18 @@ public class OrikRightImpl extends VerticalLayout implements IUpdatebleArea{
         } else {
             tabSheet.getTab(1).setVisible(false);
         }
+        updateState();
 
+    }
+
+    private void updateState(){
+        Integer idPlat = item.getIdPlat();
+        Boolean readonly = dao.isZayavkaReadOnly(linkRes,idPlat, year);
+        tabSheetMainLayout.setReadOnly(readonly);
+        tabSheetMainLayoutPower.setReadOnly(readonly);
+        orikKvit.setReadOnly(dao.isZayavkaReadOnly(linkRes,item.getIdPlat(),year));
+        orikKvitPower.setReadOnly(dao.isZayavkaReadOnly(linkRes,item.getIdPlat(),year));
+        tabSheetMainLayout.setImmediate(true);
+        tabSheetMainLayoutPower.setImmediate(true);
     }
 }

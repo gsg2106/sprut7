@@ -158,12 +158,13 @@ public class TableEditor extends Window implements Button.ClickListener{
                 if (tableRecipient.validateItemAfterEdit(fieldGroup)){
                     String error = tableRecipient.gotInput(item);
                     table.refreshRowCache();
+                    close();
                 }
             } catch (FieldGroup.CommitException ex) {
                 Notification.show("Данные не сохранены.");
                 Logger.getLogger(TableEditor.class.getName()).log(Level.SEVERE, null, ex);
+                close();
             }
-            close();
 
 
 //            String error = tableRecipient.gotInput(item);

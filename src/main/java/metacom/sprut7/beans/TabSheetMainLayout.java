@@ -1,7 +1,9 @@
 package metacom.sprut7.beans;
 
 import com.vaadin.ui.*;
+import metacom.sprut7.dao.Orik;
 import metacom.sprut7.domain.GsgWebArea;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
 /**
@@ -15,8 +17,13 @@ import org.springframework.context.annotation.Scope;
 public class TabSheetMainLayout extends VerticalLayout{
     private TableEditParent tableEditParent;
     private HorizontalLayout toolbar;
-    public void init(final TableEditParent tableEditParent){
+    private Recipient recipient;
+//    @Autowired
+//    private Orik dao;
+
+    public void init(final TableEditParent tableEditParent, Recipient recipientL){
         this.tableEditParent = tableEditParent;
+        this.recipient = recipientL;
         final TableEditParent finalTableEditParent = tableEditParent;
         toolbar = new HorizontalLayout();
         toolbar.setMargin(true);
@@ -42,6 +49,9 @@ public class TabSheetMainLayout extends VerticalLayout{
             @Override
             public void buttonClick(Button.ClickEvent clickEvent) {
                 tableEditParent.sinchrinizeTable();
+                if (recipient != null){
+                    setReadOnly(recipient.isReadOnly());
+                }
             }
         });
         toolbar.addComponent(calcButton);
@@ -50,6 +60,12 @@ public class TabSheetMainLayout extends VerticalLayout{
         toolbar.addComponent(sinchronizeButton);
         addComponent(toolbar);
         addComponent(tableEditParent);
-
+    }
+    public void setReadOnly(boolean readOnly){
+        toolbar.setReadOnly(readOnly);
+        toolbar.setEnabled(!readOnly);
+    }
+    public interface Recipient{
+        public boolean isReadOnly();
     }
 }

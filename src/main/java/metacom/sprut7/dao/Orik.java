@@ -25,9 +25,12 @@ public interface Orik {
     public BeanItemContainer<SzajNagr> getLispNagr(String linkRes, Integer idPotr, Integer year);
     public void prepareLispPotr(String linkRes, Integer idPotr, Integer year);
     public void clearLispPotr(String linkRes, Integer idPotr, Integer year);
-    public void sinchrinizeLispPotr(String linkRes, Integer idPotr, Integer year);
+    public String sinchrinizeLispPotr(String linkRes, Integer idPotr, Integer year);
 
     void prepareLispPower(String linkRes, Integer idPotr, Integer year);
     void clearLispPower(String linkRes, Integer idPotr, Integer year);
-    void sinchrinizeLispPower(String linkRes, Integer idPotr, Integer year);
+    public String sinchrinizeLispPower(String linkRes, Integer idPotr, Integer year);
+    public Boolean isZayavkaReadOnly(String linkRes, Integer idPlat, Integer year);
+    public Boolean isNewPutZayavka(String linkRes, Integer idPlat);
+
 }

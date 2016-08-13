@@ -72,7 +72,9 @@ public class OrikKvitPowerImpl  extends TableEditParent{
         dao.saveNagr(linkRes, item);
     }
     @Override
-    protected boolean validateItem(FieldGroup fieldGroup) {return false;}
+    protected boolean validateItem(FieldGroup fieldGroup) {
+        return true;
+    }
     @Override
     protected void addValidator(Field field, String idField) {}
     @Override
@@ -90,8 +92,8 @@ public class OrikKvitPowerImpl  extends TableEditParent{
     }
 
     @Override
-    protected void sinchrinize(Integer idPotr, Integer year) {
-        dao.sinchrinizeLispPower(linkRes, idPotr, year);
+    protected String sinchrinize(Integer idPlat, Integer year) {
+        return dao.sinchrinizeLispPower(linkRes, idPlat, year);
     }
 
 }

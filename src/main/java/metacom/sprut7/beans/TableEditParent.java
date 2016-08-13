@@ -33,9 +33,9 @@ public abstract class TableEditParent extends VerticalLayout implements IUpdatab
     private Orik dao;
 
     @Override
-    public void init(final String linkRes, GsgWebArea itemBin, final Integer year) {
+    public void init(final String linkRes, GsgWebArea itemBin, Integer yearL) {
         this.linkRes = linkRes;
-        this.year = year;
+        this.year = yearL;
         this.itemBin = itemBin;
         setHeight("100%");
         setStyleName("Layoutra");
@@ -48,7 +48,11 @@ public abstract class TableEditParent extends VerticalLayout implements IUpdatab
             @Override
             public void itemClick(ItemClickEvent itemClickEvent) {
                 if (itemClickEvent.isDoubleClick()){
-                    edit(itemClickEvent.getItem(), year);
+                    if (isReadOnly()){
+                        Notification.show("Редактирование запрещено", Notification.Type.WARNING_MESSAGE);
+                    } else {
+                        edit(itemClickEvent.getItem(), year);
+                    }
                 }
             }
         });
@@ -86,15 +90,16 @@ public abstract class TableEditParent extends VerticalLayout implements IUpdatab
     protected abstract boolean validateField(FieldGroup fieldGroup, Property.ValueChangeEvent valueChangeEvent, String idField);
     protected abstract void prepare(Integer idPotr, Integer year);
     protected abstract void clear(Integer idPotr, Integer year);
-    protected abstract void sinchrinize(Integer idPotr, Integer year);
+    protected abstract String sinchrinize(Integer idPlat, Integer year);
 
     public void setCaption(String caption){
         this.caption = caption;
     }
 
     @Override
-    public void update(GsgWebArea itemBin, Integer year) {
+    public void update(GsgWebArea itemBin, Integer yearL) {
         this.itemBin = itemBin;
+        this.year = yearL;
         biPotr.removeAllItems();
         biPotr = extractData(linkRes, itemBin.getIdPotr(), year);
         tableArea.setContainerDataSource(biPotr);
@@ -122,8 +127,12 @@ public abstract class TableEditParent extends VerticalLayout implements IUpdatab
     }
 
     public void sinchrinizeTable(){
-        Integer idPotr = itemBin.getIdPotr();
-        sinchrinize(idPotr, year);
+        //Integer idPotr = itemBin.getIdPotr();
+        Integer idPlat = itemBin.getIdPlat();
+        String err = sinchrinize(idPlat, year);
+        if (!err.trim().isEmpty()){
+            Notification.show(err, Notification.Type.ERROR_MESSAGE);
+        }
         update(itemBin,year);
     }
 

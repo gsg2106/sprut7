@@ -7,37 +7,50 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d36c3bab-a1f7-4a02-a097-93a60dd942fa" name="Default" comment="" />
+    <list default="true" id="d36c3bab-a1f7-4a02-a097-93a60dd942fa" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/Dolgi.java" afterPath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/Dolgi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/LimitKeyPower.java" afterPath="$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/LimitKeyPower.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/Orik.java" afterPath="$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/Orik.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java" afterPath="$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitImpl.java" afterPath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitPowerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitPowerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikRightImpl.java" afterPath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikRightImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TabSheetMainLayout.java" afterPath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TabSheetMainLayout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" afterPath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditor.java" afterPath="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="sprut-7.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470905740143" ignored="false" />
+    <file path="/Dummy.txt" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1471105310915" ignored="false" />
     <file path="/SzajPlan.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470159909659" ignored="false" />
     <file path="/Applications.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470152146760" ignored="false" />
     <file path="/Oric.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1469729663714" ignored="false" />
-    <file path="/Orik.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470755519823" ignored="false" />
-    <file path="/a.dummy" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470852945219" ignored="false" />
+    <file path="/Orik.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470948536402" ignored="false" />
+    <file path="/a.dummy" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470998624446" ignored="false" />
     <file path="/ReportsUI.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1469794930128" ignored="false" />
     <file path="/AppConfig.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470743360613" ignored="false" />
-    <file path="/OrikImpl.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470818274213" ignored="false" />
+    <file path="/OrikImpl.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470997030444" ignored="false" />
     <file path="/LoginView.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1469804502199" ignored="false" />
-    <file path="/fragment.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470860586021" ignored="false" />
+    <file path="/fragment.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1471009494791" ignored="false" />
     <file path="/GsgWebArea.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1469956392858" ignored="false" />
     <file path="/LicSchet.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1469962152866" ignored="false" />
     <file path="/persistence.xml" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470044889822" ignored="false" />
     <file path="/IUpdatablePlat.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470051503846" ignored="false" />
     <file path="/IUpdatablePlatSeazon.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470055434046" ignored="false" />
     <file path="/OrikRight.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470059858571" ignored="false" />
-    <file path="/OrikKvitImpl.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470861432496" ignored="false" />
+    <file path="/OrikKvitImpl.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470948554422" ignored="false" />
     <file path="/IUpdatableAreaSeazon.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470060388436" ignored="false" />
-    <file path="/OrikRightImpl.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470751057054" ignored="false" />
+    <file path="/OrikRightImpl.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470995604589" ignored="false" />
     <file path="/IUpdatebleArea.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470060586427" ignored="false" />
     <file path="/SzajNagr.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470818409346" ignored="false" />
-    <file path="/LimitKeyPower.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470164086706" ignored="false" />
-    <file path="/TableEditParent.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470822333103" ignored="false" />
-    <file path="/OrikKvitPowerImpl.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470823910167" ignored="false" />
+    <file path="/LimitKeyPower.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1471016353715" ignored="false" />
+    <file path="/TableEditParent.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1471008345843" ignored="false" />
+    <file path="/OrikKvitPowerImpl.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1471009082035" ignored="false" />
     <file path="/TableEditor.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470854436989" ignored="false" />
-    <file path="/TabSheetMainLayout.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470755306889" ignored="false" />
+    <file path="/TabSheetMainLayout.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470988659396" ignored="false" />
     <file path="/Kabinet.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470821048887" ignored="false" />
+    <file path="/Dolgi.java" changelist="d36c3bab-a1f7-4a02-a097-93a60dd942fa" time="1470998706089" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,14 +58,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel url="file://$PROJECT_DIR$/src" />
+    <rightPanel url="file://$PROJECT_DIR$" />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -214,20 +237,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditor.java" line="101" class="metacom.sprut7.beans.TableEditor$1" package="metacom.sprut7.beans">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.3.2/vaadin-server-7.3.2.jar!/com/vaadin/data/validator/AbstractValidator.java" line="99" class="com.vaadin.data.validator.AbstractValidator" package="com.vaadin.data.validator">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -326,20 +335,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java" line="158" class="metacom.sprut7.dao.OrikImpl" package="metacom.sprut7.dao">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitImpl.java" line="127" class="metacom.sprut7.beans.OrikKvitImpl" package="metacom.sprut7.beans">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -354,7 +349,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" line="113" class="metacom.sprut7.beans.TableEditParent" package="metacom.sprut7.beans">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java" line="217" class="metacom.sprut7.dao.OrikImpl" package="metacom.sprut7.dao">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -368,7 +363,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditor.java" line="87" class="metacom.sprut7.beans.TableEditor" package="metacom.sprut7.beans">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java" line="180" class="metacom.sprut7.dao.OrikImpl" package="metacom.sprut7.dao">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -382,7 +377,315 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditor.java" line="86" class="metacom.sprut7.beans.TableEditor" package="metacom.sprut7.beans">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java" line="194" class="metacom.sprut7.dao.OrikImpl" package="metacom.sprut7.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitPowerImpl.java" line="85" class="metacom.sprut7.beans.OrikKvitPowerImpl" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" line="119" class="metacom.sprut7.beans.TableEditParent" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikRightImpl.java" line="144" class="metacom.sprut7.beans.OrikRightImpl" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikRightImpl.java" line="142" class="metacom.sprut7.beans.OrikRightImpl" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikRightImpl.java" line="130" class="metacom.sprut7.beans.OrikRightImpl$3" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java" line="130" class="metacom.sprut7.dao.OrikImpl" package="metacom.sprut7.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java" line="132" class="metacom.sprut7.dao.OrikImpl" package="metacom.sprut7.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitPowerImpl.java" line="71" class="metacom.sprut7.beans.OrikKvitPowerImpl" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" line="143" class="metacom.sprut7.beans.TableEditParent$2" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" line="140" class="metacom.sprut7.beans.TableEditParent" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" line="110" class="metacom.sprut7.beans.TableEditParent" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" line="111" class="metacom.sprut7.beans.TableEditParent" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" line="109" class="metacom.sprut7.beans.TableEditParent" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" line="53" class="metacom.sprut7.beans.TableEditParent$1" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" line="37" class="metacom.sprut7.beans.TableEditParent" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" line="101" class="metacom.sprut7.beans.TableEditParent" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditor.java" line="158" class="metacom.sprut7.beans.TableEditor" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditor.java" line="157" class="metacom.sprut7.beans.TableEditor" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" line="155" class="metacom.sprut7.beans.TableEditParent$2" package="metacom.sprut7.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/LimitKeyPower.java" line="65" class="metacom.sprut7.domain.LimitKeyPower" package="metacom.sprut7.domain">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/LimitKeyPower.java" line="77" class="metacom.sprut7.domain.LimitKeyPower" package="metacom.sprut7.domain">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java" line="140" class="metacom.sprut7.dao.OrikImpl" package="metacom.sprut7.dao">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -397,7 +700,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -407,31 +710,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OrikKvitImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="0" selection-start="3077" selection-end="3231" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrikKvitPowerImpl.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitPowerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="4" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.12550066">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1725#1733#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TableEditParent.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="0" selection-start="3785" selection-end="3831" vertical-scroll-proportion="0.0">
+            <state line="143" column="0" selection-start="5269" selection-end="5269" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -440,16 +722,34 @@
       <file leaf-file-name="TableEditor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="27" selection-start="6349" selection-end="6349" vertical-scroll-proportion="0.0">
+            <state line="158" column="0" selection-start="6425" selection-end="6425" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Orik.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/Orik.java">
+      <file leaf-file-name="OrikKvitPowerImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitPowerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="21" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
+            <state line="71" column="0" selection-start="2608" selection-end="2608" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrikKvitImpl.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="103" selection-start="1678" selection-end="2465" vertical-scroll-proportion="0.035343036">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrikRightImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikRightImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="144" column="0" selection-start="5516" selection-end="5516" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -458,7 +758,25 @@
       <file leaf-file-name="OrikImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="48" selection-start="2608" selection-end="2608" vertical-scroll-proportion="0.0">
+            <state line="40" column="34" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SzajNagr.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/SzajNagr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="26" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LimitKeyPower.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/LimitKeyPower.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="0" selection-start="1983" selection-end="1983" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -475,29 +793,37 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
     <option name="myDateState">
       <MyDateState />
+    </option>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="expandStates">
+      <map>
+        <entry key="sprut-7" value="true" />
+      </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/LimitKeyPower.java" />
-        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/SzajNagr.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/LimitKey.java" />
         <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/AppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikRightImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TabSheetMainLayout.java" />
-        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/Orik.java" />
-        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/SzajNagr.java" />
         <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/Kabinet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/VAADIN/themes/mytheme/signPdfPfx_utf8.html" />
-        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditor.java" />
         <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TabSheetMainLayout.java" />
+        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikRightImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/Orik.java" />
+        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/Dolgi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditor.java" />
         <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitPowerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/LimitKeyPower.java" />
+        <option value="$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java" />
       </list>
     </option>
   </component>
@@ -508,11 +834,227 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="58" />
+    <option name="x" value="16" />
     <option name="y" value="24" />
-    <option name="width" value="1613" />
+    <option name="width" value="1581" />
     <option name="height" value="934" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>ActionScript specificJavaScript</id>
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Ant inspections</id>
+          </State>
+          <State>
+            <id>Application Server Specific Inspections</id>
+          </State>
+          <State>
+            <id>Assignment issues</id>
+          </State>
+          <State>
+            <id>Assignment issuesGroovy</id>
+          </State>
+          <State>
+            <id>Assignment issuesJavaScript</id>
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Class metrics</id>
+          </State>
+          <State>
+            <id>Class structure</id>
+          </State>
+          <State>
+            <id>Code style issues</id>
+          </State>
+          <State>
+            <id>Control FlowGroovy</id>
+          </State>
+          <State>
+            <id>Control flow issues</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Cucumber</id>
+          </State>
+          <State>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Declaration redundancy</id>
+          </State>
+          <State>
+            <id>Error handling</id>
+          </State>
+          <State>
+            <id>Finalization issues</id>
+          </State>
+          <State>
+            <id>GSPGrailsGroovy</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>Google App Engine</id>
+          </State>
+          <State>
+            <id>GrailsGroovy</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>Guice Inspections</id>
+          </State>
+          <State>
+            <id>IDEA Platform Inspections</id>
+          </State>
+          <State>
+            <id>Inheritance issues</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>J2ME Plugin</id>
+          </State>
+          <State>
+            <id>J2ME issues</id>
+          </State>
+          <State>
+            <id>JBoss Seam issues</id>
+          </State>
+          <State>
+            <id>JUnit issues</id>
+          </State>
+          <State>
+            <id>Java EE issues</id>
+          </State>
+          <State>
+            <id>Java language level migration aids</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript function metricsJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript validity issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Javadoc issues</id>
+          </State>
+          <State>
+            <id>Language Injection</id>
+          </State>
+          <State>
+            <id>Logging issues</id>
+          </State>
+          <State>
+            <id>Maven</id>
+          </State>
+          <State>
+            <id>Method MetricsGroovy</id>
+          </State>
+          <State>
+            <id>Method metrics</id>
+          </State>
+          <State>
+            <id>Numeric issues</id>
+          </State>
+          <State>
+            <id>Packaging issues</id>
+          </State>
+          <State>
+            <id>Pattern Validation</id>
+          </State>
+          <State>
+            <id>Performance issues</id>
+          </State>
+          <State>
+            <id>Play</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsGroovy</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+          <State>
+            <id>Properties Files</id>
+          </State>
+          <State>
+            <id>SASS/SCSS</id>
+          </State>
+          <State>
+            <id>Serialization issues</id>
+          </State>
+          <State>
+            <id>Spring Model</id>
+          </State>
+          <State>
+            <id>Threading issues</id>
+          </State>
+          <State>
+            <id>Threading issuesGroovy</id>
+          </State>
+          <State>
+            <id>UI Form Problems</id>
+          </State>
+          <State>
+            <id>Validity issuesGroovy</id>
+          </State>
+          <State>
+            <id>Web Services</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -542,8 +1084,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -896,31 +1436,50 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="204" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="203" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="204" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="204" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="878" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="878" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="204" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="203" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="sprut-7" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
@@ -1262,27 +1821,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="24" width="1613" height="934" extended-state="0" />
+    <frame x="16" y="24" width="1581" height="934" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32903227" sideWeight="0.49242923" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982224" sideWeight="0.67741936" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982224" sideWeight="0.67741936" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24950625" sideWeight="0.67741936" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42322582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.50296247" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2580645" sideWeight="0.4683871" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982224" sideWeight="0.67741936" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25274017" sideWeight="0.24129032" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2580645" sideWeight="0.2167742" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25274017" sideWeight="0.3832258" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2580645" sideWeight="0.24129032" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982224" sideWeight="0.67741936" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32258064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25274017" sideWeight="0.67741936" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2580645" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32258064" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1352,106 +1911,99 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/LispRaWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TabSheetMainLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="723" column="53" selection-start="32627" selection-end="32627" vertical-scroll-proportion="0.0">
+        <state line="64" column="0" selection-start="2352" selection-end="2352" vertical-scroll-proportion="-24.4" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/Dolgi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="27" selection-start="5355" selection-end="5355" vertical-scroll-proportion="0.44468546" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/Applications.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="20" selection-start="4361" selection-end="4361" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar!/javax/servlet/http/HttpServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="16" selection-start="2976" selection-end="2976" vertical-scroll-proportion="1.5773481" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="467" selection-end="467" vertical-scroll-proportion="0.5167959" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="28" selection-start="404" selection-end="404" vertical-scroll-proportion="0.4392765" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.3.2/vaadin-server-7.3.2.jar!/com/vaadin/event/ListenerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="16" selection-start="2142" selection-end="2142" vertical-scroll-proportion="0.31331593" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="482" column="0" selection-start="17910" selection-end="17910" vertical-scroll-proportion="0.31591448" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/SzajNagr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="26" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/VAADIN/themes/mytheme/signPdfutf8.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/LimitKeyPower.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="52" selection-start="1647" selection-end="1660" vertical-scroll-proportion="0.038724374">
+        <state line="77" column="0" selection-start="1983" selection-end="1983" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/domain/SzajPlan.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikRightImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="45" selection-start="3906" selection-end="3915" vertical-scroll-proportion="-22.68">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/Orik.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="21" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="48" selection-start="2608" selection-end="2608" vertical-scroll-proportion="0.0">
+        <state line="144" column="0" selection-start="5516" selection-end="5516" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="27" selection-start="6349" selection-end="6349" vertical-scroll-proportion="0.0">
+        <state line="158" column="0" selection-start="6425" selection-end="6425" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.3.2/vaadin-server-7.3.2.jar!/com/vaadin/server/VaadinService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="19" selection-start="9584" selection-end="9584" vertical-scroll-proportion="0.35635358" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.3.2/vaadin-server-7.3.2.jar!/com/vaadin/server/SynchronizedRequestHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="545" selection-end="545" vertical-scroll-proportion="0.46961325" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.3.2/vaadin-server-7.3.2.jar!/com/vaadin/server/communication/UidlRequestHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="19" selection-start="616" selection-end="616" vertical-scroll-proportion="0.3368146" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.3.2/vaadin-server-7.3.2.jar!/com/vaadin/event/ListenerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="16" selection-start="2142" selection-end="2142" vertical-scroll-proportion="0.3550914" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.3.2/vaadin-server-7.3.2.jar!/com/vaadin/ui/Table.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="30" selection-start="6781" selection-end="6781" vertical-scroll-proportion="0.3550914" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/src.zip!/java/util/HashSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="11" selection-start="3699" selection-end="3699" vertical-scroll-proportion="-2.3325415">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.3.2/vaadin-server-7.3.2.jar!/com/vaadin/server/communication/ServerRpcHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="617" selection-end="617" vertical-scroll-proportion="0.53263706" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/TableEditParent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="0" selection-start="3785" selection-end="3831" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="3077" selection-end="3231" vertical-scroll-proportion="0.0">
+        <state line="143" column="0" selection-start="5269" selection-end="5269" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitPowerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="4" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.12550066">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1725#1733#0" expanded="true" />
-          </folding>
+        <state line="71" column="0" selection-start="2608" selection-end="2608" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/dao/OrikImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="34" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/metacom/sprut7/beans/OrikKvitImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="103" selection-start="1678" selection-end="2465" vertical-scroll-proportion="0.035343036">
+          <folding />
         </state>
       </provider>
     </entry>

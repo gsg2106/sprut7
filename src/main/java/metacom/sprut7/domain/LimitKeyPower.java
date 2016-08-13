@@ -64,7 +64,8 @@ public class LimitKeyPower implements Serializable{
                 && (limitKeyPower.years.intValue() == this.years.intValue())
                 && (limitKeyPower.months.intValue() == this.months.intValue()
                 && (limitKeyPower.storno.charValue() == this.storno.charValue())
-                && (limitKeyPower.dateDoc.equals(this.dateDoc)));
+                && (limitKeyPower.dateDoc.getTime() == this.dateDoc.getTime()));
+//        && (limitKeyPower.dateDoc.equals(this.dateDoc)));
     }
     @Override
     public int hashCode(){

@@ -142,7 +142,7 @@ public class OrikImpl implements Orik{
             e2.setZajValU((Double) item.getItemProperty("zajValU").getValue());
             e2.setZajValV((Double) item.getItemProperty("zajValV").getValue());
             e2.setHand(2);
-            e2.setDateDoc(new Date());
+            //e2.setDateDoc(new Date());
             em2.persist(e2);
             em2.getTransaction().commit();
         }
@@ -177,8 +177,18 @@ public class OrikImpl implements Orik{
         em.getTransaction().commit();
     }
 
-    public void sinchrinizeLispPotr(String linkRes, Integer idPotr, Integer year){
-
+    public String sinchrinizeLispPotr(String linkRes, Integer idPlat, Integer year){
+        EntityManager em = Persistence
+                .createEntityManagerFactory(linkRes)
+                .createEntityManager();
+        Query q = em.createNativeQuery("select * from BOB_VERIFY_ZAYVKA(?, ?, 100)");
+        q.setParameter(2, year);
+        q.setParameter(1, idPlat);
+        em.getTransaction().begin();
+            String rez = (String) q.getSingleResult();
+//        int i = q.executeUpdate();
+        em.getTransaction().commit();
+        return rez;
     }
 
     public void prepareLispPower(String linkRes, Integer idPotr, Integer year){
@@ -186,8 +196,8 @@ public class OrikImpl implements Orik{
                 .createEntityManagerFactory(linkRes)
                 .createEntityManager();
         Query q = em.createNativeQuery("execute procedure BOB_INI_ONE_RECORD_NAGR(?,?,'ZAJ')");
-        q.setParameter(2, year);
         q.setParameter(1, idPotr);
+        q.setParameter(2, year);
         em.getTransaction().begin();
         int i = q.executeUpdate();
         em.getTransaction().commit();
@@ -204,9 +214,46 @@ public class OrikImpl implements Orik{
         int i = q.executeUpdate();
         em.getTransaction().commit();
     }
-    public void sinchrinizeLispPower(String linkRes, Integer idPotr, Integer year){
+    public String sinchrinizeLispPower(String linkRes, Integer idPlat, Integer year){
+        EntityManager em = Persistence
+                .createEntityManagerFactory(linkRes)
+                .createEntityManager();
+        Query q = em.createNativeQuery("select * from BOB_VERIFY_ZAYVKA(?, ?, 100)");
+        q.setParameter(2, year);
+        q.setParameter(1, idPlat);
+        String rez = (String) q.getSingleResult();
+        return rez;
+//        em.getTransaction().begin();
+//        int i = q.executeUpdate();
+//        em.getTransaction().commit();
 
     }
 
+    public Boolean isZayavkaReadOnly(String linkRes, Integer idPlat, Integer year){
+        EntityManager em = Persistence
+                .createEntityManagerFactory(linkRes)
+                .createEntityManager();
+        Query q = em.createNativeQuery("select * from BOB_READ_ONLY_ZAYVKA(?, ?)");
+        q.setParameter(1, idPlat);
+        q.setParameter(2, year);
+        String rez = (String) q.getSingleResult();
+        if (rez.equals("0"))
+            return false;
+        else
+            return true;
+    }
+
+    public Boolean isNewPutZayavka(String linkRes, Integer idPlat){
+        EntityManager em = Persistence
+                .createEntityManagerFactory(linkRes)
+                .createEntityManager();
+        Query q = em.createNativeQuery("select * from BOB_IS_NEW_PUT_ZAYVKA(?)");
+        q.setParameter(1, idPlat);
+        String rez = (String) q.getSingleResult();
+        if (rez.equals("0"))
+            return false;
+        else
+            return true;
+    }
 
 }
